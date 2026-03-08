@@ -3,8 +3,8 @@ package com.example.manageinventoryapp;
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.DELETE; // Importante para eliminar
-import retrofit2.http.GET;    // Importante para leer
+import retrofit2.http.DELETE;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 

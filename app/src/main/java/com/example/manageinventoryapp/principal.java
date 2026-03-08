@@ -14,17 +14,14 @@ public class principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal);
 
-        // Referencias a los CardView del XML
         cardProductos = findViewById(R.id.productos);
         cardMovimientos = findViewById(R.id.movimientos);
 
-        // Listener para Productos
         cardProductos.setOnClickListener(v -> {
             Intent intent = new Intent(principal.this, productos.class);
             startActivity(intent);
         });
 
-        // Listener para Movimientos
         cardMovimientos.setOnClickListener(v -> {
             Intent intent = new Intent(principal.this, movimientos.class);
             startActivity(intent);

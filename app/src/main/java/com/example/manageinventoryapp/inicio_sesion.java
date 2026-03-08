@@ -25,23 +25,18 @@ public class inicio_sesion extends AppCompatActivity {
             String usuario = inputUsuario.getText().toString().trim();
             String password = inputPassword.getText().toString().trim();
 
-            // 1. Validación de campos vacíos
             if (usuario.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "⚠️ Por favor, llena todos los campos", Toast.LENGTH_SHORT).show();
             }
-            // 2. Validación de credenciales para William
             else if (usuario.equals("william") && password.equals("1234")) {
                 Toast.makeText(this, "✅ Bienvenido al Sistema", Toast.LENGTH_SHORT).show();
 
-                // Si es correcto, pasamos a la pantalla principal
                 Intent intent = new Intent(inicio_sesion.this, principal.class);
                 startActivity(intent);
                 finish();
             }
-            // 3. Error si los datos no coinciden
             else {
                 Toast.makeText(this, "❌ Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
             }
-        }); // Aquí se cierra correctamente el Listener
-    }
+        });
 }

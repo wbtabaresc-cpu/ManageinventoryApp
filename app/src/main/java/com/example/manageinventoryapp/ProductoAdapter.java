@@ -39,7 +39,6 @@ public class ProductoAdapter extends ArrayAdapter<Producto> {
         nombre.setText(producto.getNombre());
         idProd.setText("ID: " + producto.getId_producto());
 
-        // Lógica para ELIMINAR
         btnEliminar.setOnClickListener(v -> {
             ApiService api = RetrofitClient.getApiService();
             api.eliminarProducto(producto.get_id()).enqueue(new Callback<Void>() {
