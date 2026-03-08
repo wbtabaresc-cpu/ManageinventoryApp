@@ -27,16 +27,15 @@ public class inicio_sesion extends AppCompatActivity {
 
             if (usuario.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "⚠️ Por favor, llena todos los campos", Toast.LENGTH_SHORT).show();
-            }
-            else if (usuario.equals("william") && password.equals("1234")) {
+            } else if (usuario.equals("william") && password.equals("1234")) {
                 Toast.makeText(this, "✅ Bienvenido al Sistema", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(inicio_sesion.this, principal.class);
                 startActivity(intent);
                 finish();
-            }
-            else {
+            } else {
                 Toast.makeText(this, "❌ Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
             }
         });
+    }
 }

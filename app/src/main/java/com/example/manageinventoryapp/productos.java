@@ -26,13 +26,20 @@ public class productos extends AppCompatActivity {
 
         btnRegistrarProducto = findViewById(R.id.registrar);
         listaProductos = findViewById(R.id.listaProductos);
+        CardView btnVerProductos = findViewById(R.id.transferencias);
+
+        listaProductos.setVisibility(android.view.View.GONE);
+
+        btnVerProductos.setOnClickListener(v -> {
+            listaProductos.setVisibility(android.view.View.VISIBLE);
+            cargarProductos();
+            Toast.makeText(this, "Mostrando inventario de Atlas", Toast.LENGTH_SHORT).show();
+        });
 
         btnRegistrarProducto.setOnClickListener(v -> {
             Intent intent = new Intent(productos.this, registrar_producto.class);
             startActivity(intent);
         });
-
-        cargarProductos();
     }
 
     @Override
